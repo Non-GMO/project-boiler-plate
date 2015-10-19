@@ -1,0 +1,33 @@
+Use Case: Scanning a Barcode
+Scope: Decision Improving Application
+Level: User Goal
+Primary Actor: Food Shopper
+1.	Present product to the barcode scanner.
+2.	Customer receives infographic about the product that will tell the customer if the product is Organic or not Organic. 
+3.	Resets
+
+Use Case: Inputting a UPC-code
+Scope: Decision Improving Application
+Level: User Goal
+Primary Actor: Food Shopper
+1.	Present product to the barcode scanner.
+2.	Barcode scanner can not recognize the UPC code given. 
+3.	Another fragment is brought up to allow customer to input UPC data.
+4.	User inputs numbers and hits submit. 
+5.	Customer receives infographic about the product that will tell the customer if the product is Organic or not Organic. 
+6.	Resets
+
+Use Case: Finding more products/brands
+Scope: Decision Improving Application
+Level: User Goal
+Primary Actor: Food Shopper
+1.	User wants to find out more products that are organic, so there is a products button that will display more products that are organic.
+2.	User can scroll through the list to see if the product displays an organic check mark or a non organic x mark. 
+3.	Returns to main fragment.
+
+
+
+
+
+
+
