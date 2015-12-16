@@ -6,4 +6,5 @@ package edu.cosc4950.non_gmo_app;
 public class MainActivity {
 
     private int a = 5;
+    private int x = 2;
 }
