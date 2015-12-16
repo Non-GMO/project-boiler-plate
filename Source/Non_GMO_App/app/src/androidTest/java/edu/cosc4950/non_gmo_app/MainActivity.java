@@ -8,9 +8,6 @@ public class MainActivity {
     private int a = 5;
     private int x = 2;
 
-<<<<<<< HEAD
-    // Hello this comment is just a test
-=======
     /**
      * L
      * O
@@ -18,5 +15,7 @@ public class MainActivity {
      * G
      * Comment
      */
->>>>>>> master
+
+    // Hello its me
+
 }
