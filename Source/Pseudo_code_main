@@ -1,0 +1,56 @@
+// main pseudocode
+
+
+
+// user taps badge
+open_app;
+
+if (app is open)
+{
+	open_camera;	// open_camera and run_scan could be put into one function
+	run_scan;
+	open.database 	// open database after scan to minimize start-up time? could be put first thing, but that might defeat the purpose of a quick start.
+	if(product scans correctly)
+		{
+			current_scan.search_database;	// search_database and display_results could be put into one function
+			if (current_scan is in database)
+				{
+					display_results;		// sarcastic comment: suggest user posts picture to instagram.
+				}
+			else	// current scan not in database
+				{
+					display_results;		// offer suggestions or show related items that are GMO-free.
+									
+				}
+		
+		}
+	elseif (user enters UPC code manually)
+		{
+			open_keypad;
+			// user enters UPC code
+			UPC_code_check;	// make sure that UPC code is valid so an error or crash doesn't happen
+			if(UPC_code_check is valid)
+			{
+				current.scan.search_database;
+				display_results;
+			}
+			else	// bad input
+			{
+				display_error;		// sarcastic comment: mock the user for screwing up such a simple thing.
+			}
+		}
+	elseif (user sorts by item)
+		{
+			database.sort;
+		}
+	else	// something went very, very wrong
+		{
+			debugging;
+			// don't be here
+		}
+			
+}
+else
+{
+	close_app;	//stop any process that were happening and make sure they don't run in background (I personally hate when apps unnecessarily run in the background)
+}
