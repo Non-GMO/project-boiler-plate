@@ -7,4 +7,12 @@ public class MainActivity {
 
     private int a = 5;
     private int x = 2;
+
+    /**
+     * L
+     * O
+     * N
+     * G
+     * Comment
+     */
 }
