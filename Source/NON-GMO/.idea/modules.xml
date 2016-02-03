@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NON-GMO.iml" filepath="$PROJECT_DIR$/NON-GMO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Non-GMO.iml" filepath="$PROJECT_DIR$/Non-GMO.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
