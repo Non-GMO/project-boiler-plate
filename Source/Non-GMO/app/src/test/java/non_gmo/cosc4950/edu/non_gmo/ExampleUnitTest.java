@@ -1,4 +1,4 @@
-package edu.cosc4950.non_gmo;
+package non_gmo.cosc4950.edu.non_gmo;
 
 import org.junit.Test;
 
