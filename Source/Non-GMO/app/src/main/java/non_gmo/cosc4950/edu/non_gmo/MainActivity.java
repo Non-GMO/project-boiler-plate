@@ -3,6 +3,7 @@ package non_gmo.cosc4950.edu.non_gmo;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -293,11 +294,11 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
             // TODO: start the camera activity for result
         } else if (id == R.id.nav_numpad) {
-            // TODO: start the numpad activity for result
             Intent intent = new Intent(MainActivity.this, numpad.class);
             startActivityForResult(intent, 2);
         } else if (id == R.id.nav_list) {
-            // TODO: start the list activity for result
+            Intent intent = new Intent(MainActivity.this, ListActivity.class);
+            startActivityForResult(intent, 3);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
