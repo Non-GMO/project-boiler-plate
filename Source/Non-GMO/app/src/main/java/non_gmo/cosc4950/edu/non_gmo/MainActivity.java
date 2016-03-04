@@ -293,6 +293,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_scan) {
             // Handle the camera action
             // TODO: start the camera activity for result
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            startActivityForResult(intent, 1);
         } else if (id == R.id.nav_numpad) {
             Intent intent = new Intent(MainActivity.this, numpad.class);
             startActivityForResult(intent, 2);
@@ -305,5 +307,4 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 }

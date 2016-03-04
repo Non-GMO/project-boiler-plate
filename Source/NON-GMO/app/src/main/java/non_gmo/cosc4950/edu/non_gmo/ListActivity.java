@@ -12,6 +12,6 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // TODO: CODE LIST STUFF
+        // TODO: POPULATE LIST WITH DATABASE
     }
 }
