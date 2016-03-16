@@ -1,0 +1,42 @@
+how to format the excel document into the proper format:
+-copy the column(s) you want into a new sheet
+-create new cells inbetween each column and after the last column
+-in the top cell of the column, put your value seperator (I used a comma. In hindsight I should have used something less common) and apply that cell to all the cells in that column 
+-in a cell next to the right of the last column type "=(<firstCell> & <secondCell> & <thirdCell>...)" and hit enter
+	this should combine the columns into one column with the value seperator seperating the values
+-copy this new column into a new sheet, paste the values paste>values (for me this was the one with the clipboard and 123 on it)
+	this should paste the column with the data instead of a #REF! or something like that
+-select the column to the right of the data column and click up top on Formulas>Text>CLEAN
+-select the top column of your data column and select ok
+	this new right entry no longer has a bunch of whitespace that will ruin shit
+-apply this to the rest of the column
+	the right data column is your new best friend
+-copy this new column into a new sheet (again use paste>values)
+	this sheet now is formatted correctly
+-select up top File>Save As>Save as Type>Text (Tab delimited)
+-close the excel workbook
+-open the text file you just made
+-ctrl+H
+-find what: <your value seperator>
+-replace with: _<value seperator>_	where _ = <space>
+-your text document should look exactly like: (using a comma as a value seperator for example)
+	<productName> , <brandName> , <organic> , <UPC> , 
+-if some entries in your spreadsheet were blank when you formatted it it will look like:
+	<productName> , <brandName>,  , <organic> , <UPC> , 
+	that's fine, I did another ctrl+H and replaced: ,  , with: , <none> ,
+-Pain in the ass? yes. Worth it? maybe. Are you done? probably.
+
+
+-cases that ruin shit (using a comma as a seperator)
+	- Strawberries , Apples and Blueberries , <brandName> , <organic> , <UPC> , 	<- the comma between Strawberries and Apples 
+	- <productName> , Monsters, Inc. , <organic> , <UPC> , 				<- the comma between Monsters and Inc.
+	- litteraly any other cases that aren't exactly the proper format
+
+-other notes
+	- organic returns 0 if the product is not organic, 1 if it is, and -1 if that cell was empty or if there was an error
+	- whitespaces are the devil
+	- one error reading in a value can cause cascadaing input errors. go to the first instance of the error and fix it there and try it again.
+	- there are multiple UPCs that are 00000000 so it might return a the wrong entry in those cases
+good luck
+	
+	
