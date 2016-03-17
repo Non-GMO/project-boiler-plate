@@ -293,18 +293,26 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_scan) {
             // Handle the camera action
             // TODO: start the camera activity for result
-            Intent intent = new Intent(MainActivity.this, MainActivity.class);
-            startActivityForResult(intent, 1);
+            Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
+            startActivityForResult(intent1, 1);
         } else if (id == R.id.nav_numpad) {
-            Intent intent = new Intent(MainActivity.this, numpad.class);
-            startActivityForResult(intent, 2);
+            Intent intent2 = new Intent(MainActivity.this, numpad.class);
+            startActivityForResult(intent2, 2);
         } else if (id == R.id.nav_list) {
-            Intent intent = new Intent(MainActivity.this, ListActivity.class);
-            startActivityForResult(intent, 3);
+            Intent intent3 = new Intent(MainActivity.this, ListActivity.class);
+            startActivityForResult(intent3, 3);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            
+        }
     }
 }

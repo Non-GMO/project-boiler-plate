@@ -113,6 +113,8 @@ public class numpad extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 // TODO: SEARCH DATABASE FOR NUMBER
+                setResult(RESULT_OK);
+                finish();
             }
         });
     }
