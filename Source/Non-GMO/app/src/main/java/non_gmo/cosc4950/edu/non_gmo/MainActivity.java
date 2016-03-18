@@ -290,13 +290,14 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        /*
         if (id == R.id.nav_scan) {
             // Handle the camera action
             // TODO: start the camera activity for result
             Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
             startActivityForResult(intent1, 1);
-        } else if (id == R.id.nav_numpad) {
-            Intent intent2 = new Intent(MainActivity.this, numpad.class);
+        } else */ if (id == R.id.nav_numpad) {
+            Intent intent2 = new Intent(MainActivity.this, NumpadActivity.class);
             startActivityForResult(intent2, 2);
         } else if (id == R.id.nav_list) {
             Intent intent3 = new Intent(MainActivity.this, ListActivity.class);

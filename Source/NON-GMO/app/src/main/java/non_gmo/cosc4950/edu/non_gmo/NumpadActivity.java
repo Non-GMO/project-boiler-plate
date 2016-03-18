@@ -3,7 +3,6 @@ package non_gmo.cosc4950.edu.non_gmo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 /**
  * Created by Bridger on 2/19/2016.
  */
-public class numpad extends AppCompatActivity{
+public class NumpadActivity extends AppCompatActivity{
     Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b_backspace, b_enter;
     TextView num;
 
@@ -19,9 +18,9 @@ public class numpad extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numpad);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // RETURN INTENT STUFF
         Intent intent = getIntent();
@@ -104,9 +103,11 @@ public class numpad extends AppCompatActivity{
                 if (str.length() == 0) {
                     // USER IS A DUMBASS
                 } else{
+                    // TODO: NOT WORKING/UPDATING
                     str.substring(0, str.length()-1);
+                    num.setText("");
+                    num.setText(str);
                 }
-                num.setText(str);
             }
         });
         b_enter.setOnClickListener(new View.OnClickListener() {
