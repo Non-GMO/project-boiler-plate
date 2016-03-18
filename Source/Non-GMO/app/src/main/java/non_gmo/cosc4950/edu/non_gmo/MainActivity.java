@@ -3,6 +3,7 @@ package non_gmo.cosc4950.edu.non_gmo;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -289,18 +290,18 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        /*
+        if (id == R.id.nav_scan) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            // TODO: start the camera activity for result
+            Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
+            startActivityForResult(intent1, 1);
+        } else */ if (id == R.id.nav_numpad) {
+            Intent intent2 = new Intent(MainActivity.this, NumpadActivity.class);
+            startActivityForResult(intent2, 2);
+        } else if (id == R.id.nav_list) {
+            Intent intent3 = new Intent(MainActivity.this, ListActivity.class);
+            startActivityForResult(intent3, 3);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -308,4 +309,11 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            
+        }
+    }
 }
