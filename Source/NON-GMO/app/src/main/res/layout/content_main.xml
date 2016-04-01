@@ -12,4 +12,9 @@
     tools:context="non_gmo.cosc4950.edu.non_gmo.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> Bridger's-New-Branch
 </RelativeLayout>
