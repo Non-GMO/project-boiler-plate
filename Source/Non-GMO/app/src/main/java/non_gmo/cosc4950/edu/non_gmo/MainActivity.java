@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity
 
                 Bundle stuff = msg.getData();
                 String bc = stuff.getString("barcode");
+                mLogger.setText(bc);
+                mLogger.invalidate();
                 //now start a dialog about web or amazon search.
                 myDialogFragment myDialog = myDialogFragment.newInstance(bc);
                 myDialog.show(getSupportFragmentManager(), null);
@@ -75,6 +77,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        createCameraSource();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -84,8 +87,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        createCameraSource();
     }
 
     private void createCameraSource() {
@@ -195,7 +196,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-
+        mSurfaceAvailable = true;
+        startPreview();
     }
 
     @Override
@@ -205,7 +207,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
-
+        mSurfaceAvailable = false;
     }
 
     //A simple implementation of the MultiProcessor factory.
@@ -290,15 +292,18 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        /*
         if (id == R.id.nav_scan) {
             // Handle the camera action
             // TODO: start the camera activity for result
-        } else if (id == R.id.nav_numpad) {
-            // TODO: start the numpad activity for result
-            Intent intent = new Intent(MainActivity.this, numpad.class);
-            startActivityForResult(intent, 2);
+            Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
+            startActivityForResult(intent1, 1);
+        } else */ if (id == R.id.nav_numpad) {
+            Intent intent2 = new Intent(MainActivity.this, NumpadActivity.class);
+            startActivityForResult(intent2, 2);
         } else if (id == R.id.nav_list) {
-            // TODO: start the list activity for result
+            Intent intent3 = new Intent(MainActivity.this, ListActivity.class);
+            startActivityForResult(intent3, 3);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -306,4 +311,11 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            
+        }
+    }
 }

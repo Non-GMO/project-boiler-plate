@@ -26,6 +26,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NumpadActivity"
+            android:label="Number Pad"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="non_gmo.cosc4950.edu.non_gmo.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ListActivity"
+            android:label="List"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="non_gmo.cosc4950.edu.non_gmo.MainActivity" />
+        </activity>
     </application>
-
 </manifest>
