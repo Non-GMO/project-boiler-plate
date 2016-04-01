@@ -3,6 +3,7 @@ package non_gmo.cosc4950.edu.non_gmo;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
