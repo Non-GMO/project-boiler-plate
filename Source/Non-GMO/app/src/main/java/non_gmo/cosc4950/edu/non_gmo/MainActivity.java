@@ -22,6 +22,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.MultiProcessor;
@@ -30,6 +31,7 @@ import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
+
 
 
 public class MainActivity extends AppCompatActivity
