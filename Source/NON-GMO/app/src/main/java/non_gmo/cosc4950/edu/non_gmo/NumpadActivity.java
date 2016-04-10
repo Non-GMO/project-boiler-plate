@@ -101,12 +101,9 @@ public class NumpadActivity extends AppCompatActivity{
             public void onClick(View v) {
                 String str = num.getText().toString();
                 if (str.length() == 0) {
-                    // USER IS A DUMBASS
+                    // USER IS DUMB
                 } else{
-                    // TODO: NOT WORKING/UPDATING
-                    str.substring(0, str.length()-1);
-                    num.setText("");
-                    num.setText(str);
+                    num.setText(num.getText().toString().substring(0, num.getText().toString().length()-1));
                 }
             }
         });
