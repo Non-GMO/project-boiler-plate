@@ -34,14 +34,14 @@
             android:id="@+id/btn_web"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Brands" />
+            android:text="Back" />
 
         <Button
             android:id="@+id/btn_amazon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="Back" />
+            android:text="Amazon" />
     </LinearLayout>
 
 
