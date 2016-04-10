@@ -22,6 +22,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.MultiProcessor;
@@ -30,6 +31,7 @@ import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
+
 
 
 public class MainActivity extends AppCompatActivity
@@ -69,6 +71,8 @@ public class MainActivity extends AppCompatActivity
 
                 Bundle stuff = msg.getData();
                 String bc = stuff.getString("barcode");
+                mLogger.setText(bc);
+                mLogger.invalidate();
                 //now start a dialog about web or amazon search.
                 myDialogFragment myDialog = myDialogFragment.newInstance(bc);
                 myDialog.show(getSupportFragmentManager(), null);
@@ -76,6 +80,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        createCameraSource();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -85,8 +90,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        createCameraSource();
     }
 
     private void createCameraSource() {
@@ -196,7 +199,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-
+        mSurfaceAvailable = true;
+        startPreview();
     }
 
     @Override
@@ -206,7 +210,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
-
+        mSurfaceAvailable = false;
     }
 
     //A simple implementation of the MultiProcessor factory.

@@ -15,6 +15,7 @@
         android:layout_height="match_parent"
         tools:ignore="MergeRootFrame" />
 
+
     <TextView
         android:id="@+id/logger"
         android:layout_width="fill_parent"
@@ -25,6 +26,9 @@
         android:id="@+id/CameraView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"/>
+
+
+
 
     <include
         layout="@layout/app_bar_main"

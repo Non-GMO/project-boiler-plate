@@ -70,6 +70,7 @@ public class myDialogFragment extends DialogFragment {
         btn_amazon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // TODO: make this button go back to the scan function of the app.
                 dismiss();
                 //http://www.amazon.com/s?url=search-alias%3Daps&field-keywords=honda+parts
                 String url = "http://www.amazon.com/s?url=search-alias%3Daps&field-keywords=" + mParam1;
@@ -83,6 +84,7 @@ public class myDialogFragment extends DialogFragment {
         btn_web.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // TODO: make this button go to the listview of our app.
                 dismiss();
 
                 String url = mParam1;
