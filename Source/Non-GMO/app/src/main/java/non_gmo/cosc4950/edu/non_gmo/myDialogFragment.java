@@ -64,7 +64,7 @@ public class myDialogFragment extends DialogFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View myView = inflater.inflate(R.layout.fragment_my_dialog, container, false);
-        tv_bc = (TextView) myView.findViewById(R.id.barcode);
+        //tv_bc = (TextView) myView.findViewById(R.id.barcode);
         tv_bc.setText(mParam1);
         btn_amazon = (Button) myView.findViewById(R.id.btn_amazon);
         btn_amazon.setOnClickListener(new View.OnClickListener() {

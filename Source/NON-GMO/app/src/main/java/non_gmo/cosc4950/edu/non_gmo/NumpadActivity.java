@@ -110,7 +110,7 @@ public class NumpadActivity extends AppCompatActivity{
         b_enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: SEARCH DATABASE FOR NUMBER
+                // TODO: SEARCH DATABASE FOR
                 setResult(RESULT_OK);
                 finish();
             }
