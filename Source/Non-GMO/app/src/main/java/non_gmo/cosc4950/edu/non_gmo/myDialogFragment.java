@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -24,7 +25,7 @@ public class myDialogFragment extends DialogFragment {
     private String mParam1;
 
     private Button btn_web, btn_amazon;
-    private TextView tv_bc;
+    private ImageView tv_bc;
 
 
 
@@ -64,8 +65,8 @@ public class myDialogFragment extends DialogFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View myView = inflater.inflate(R.layout.fragment_my_dialog, container, false);
-        tv_bc = (TextView) myView.findViewById(R.id.barcode);
-        tv_bc.setText(mParam1);
+        tv_bc = (ImageView) myView.findViewById(R.id.barcode);
+        //tv_bc.setText(mParam1);
         btn_amazon = (Button) myView.findViewById(R.id.btn_amazon);
         btn_amazon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,10 +88,10 @@ public class myDialogFragment extends DialogFragment {
                 // TODO: make this button go to the listview of our app.
                 dismiss();
 
-                String url = mParam1;
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+                //String url = mParam1;
+                //Intent i = new Intent(Intent.ACTION_VIEW);
+                //i.setData(Uri.parse(url));
+                //startActivity(i);
             }
         });
         return myView;
