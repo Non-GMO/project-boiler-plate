@@ -1,4 +1,4 @@
-/*package non_gmo.cosc4950.edu.non_gmo;
+package non_gmo.cosc4950.edu.non_gmo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-*//**
+*
  * Created by mike on 4/24/16.
- *//*
+
 public class CSVReader {
 
     InputStream inputStream;
@@ -39,4 +39,4 @@ public class CSVReader {
 
         return catList;
     }
-}*/
+}
