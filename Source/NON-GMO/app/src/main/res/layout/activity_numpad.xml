@@ -15,7 +15,8 @@
         android:layout_marginBottom="50dp"
         android:maxLines="1"
         android:textAlignment="center"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:maxLength="12"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -33,21 +34,24 @@
             android:layout_height="95dp"
             android:text="7"
             android:id="@+id/button_7"
-            android:layout_weight="0.33"/>
+            android:layout_weight="0.33"
+            android:textSize="25dp" />
 
         <Button
             android:layout_width="112dp"
             android:layout_height="95dp"
             android:text="8"
             android:id="@+id/button_8"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
         <Button
             android:layout_width="112dp"
             android:layout_height="95dp"
             android:text="9"
             android:id="@+id/button_9"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -67,21 +71,24 @@
             android:layout_height="95dp"
             android:text="4"
             android:id="@+id/button_4"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
         <Button
             android:layout_width="112dp"
             android:layout_height="95dp"
             android:text="5"
             android:id="@+id/button_5"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
         <Button
             android:layout_width="112dp"
             android:layout_height="95dp"
             android:text="6"
             android:id="@+id/button_6"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -102,21 +109,24 @@
             android:layout_height="95dp"
             android:text="1"
             android:id="@+id/button_1"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
         <Button
             android:layout_width="112dp"
             android:layout_height="95dp"
             android:text="2"
             android:id="@+id/button_2"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
         <Button
             android:layout_width="112dp"
             android:layout_height="95dp"
             android:text="3"
             android:id="@+id/button_3"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -137,21 +147,24 @@
             android:layout_height="95dp"
             android:text="&lt;--"
             android:id="@+id/button_bckspc"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
         <Button
             android:layout_width="112dp"
             android:layout_height="95dp"
             android:text="0"
             android:id="@+id/button_0"
-            android:layout_weight=".33" />
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
         <Button
             android:layout_width="112dp"
             android:layout_height="95dp"
             android:text="Search"
             android:id="@+id/button_search"
-            android:layout_weight=".33"/>
+            android:layout_weight=".33"
+            android:textSize="25dp" />
 
     </LinearLayout>
 

@@ -24,7 +24,7 @@ public class myDialogFragment extends DialogFragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
 
-    private Button btn_web, btn_amazon;
+    private Button btn_back, btn_amazon;
     private ImageView tv_bc;
 
 
@@ -71,7 +71,6 @@ public class myDialogFragment extends DialogFragment {
         btn_amazon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: make this button go back to the scan function of the app.
                 dismiss();
                 //http://www.amazon.com/s?url=search-alias%3Daps&field-keywords=honda+parts
                 String url = "http://www.amazon.com/s?url=search-alias%3Daps&field-keywords=" + mParam1;
@@ -81,11 +80,10 @@ public class myDialogFragment extends DialogFragment {
             }
         });
 
-        btn_web = (Button)myView.findViewById(R.id.btn_web);
-        btn_web.setOnClickListener(new View.OnClickListener() {
+        btn_back = (Button)myView.findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: make this button go to the listview of our app.
                 dismiss();
 
                 //String url = mParam1;
