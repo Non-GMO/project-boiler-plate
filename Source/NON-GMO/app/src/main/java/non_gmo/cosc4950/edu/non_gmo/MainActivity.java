@@ -38,7 +38,6 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SurfaceHolder.Callback {
 
-    // TODO: MAKE CAMERA PREVIEW WORK
     String TAG = "MainActivity";
     CameraSource mCameraSource;
     SurfaceView mPreview;
