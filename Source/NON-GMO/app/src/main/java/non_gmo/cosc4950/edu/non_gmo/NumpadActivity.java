@@ -3,6 +3,7 @@ package non_gmo.cosc4950.edu.non_gmo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 public class NumpadActivity extends AppCompatActivity{
     Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b_backspace, b_enter;
     TextView num;
+    ProductsDatabase db = new ProductsDatabase(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,12 @@ public class NumpadActivity extends AppCompatActivity{
         b_enter = (Button) findViewById(R.id.button_search);
         num = (TextView) findViewById(R.id.entered_num);
         //------------------------------------------------------------------------
+        b0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                num.append(b0.getText());
+            }
+        });
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,7 +118,19 @@ public class NumpadActivity extends AppCompatActivity{
         b_enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: SEARCH DATABASE FOR NUMBER
+
+                db.open();
+                boolean temp = db.numpadSearch(num.getText().toString());
+                db.close();
+                Log.d("NUMPADACTIVITY","Searched for number");
+                if (temp) {
+                    Log.d("NUMPADACTIVITY","Number found");
+                } else {
+                    Log.d("NUMPADACTIVITY","Number not found");
+                }
+
+                // TODO: Show dialog fragment somehow (maybe return boolean to mainactivity?)
+
                 setResult(RESULT_OK);
                 finish();
             }

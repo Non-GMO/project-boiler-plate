@@ -4,10 +4,12 @@ package non_gmo.cosc4950.edu.non_gmo;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
@@ -22,7 +24,6 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.database.sqlite.SQLiteDatabase;
 
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.MultiProcessor;
@@ -56,6 +57,31 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        // Runs once on app install. Parses .csv file into database.
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean("firstTime", false)) {
+            Log.d(TAG, "Made it inside first time block");
+
+
+            //MyDBHandler DBHandler = new MyDBHandler(this);
+            ProductsDatabase db = new ProductsDatabase(this);
+            Log.d(TAG, "Handler and database declared (db init to null)");
+
+            db.open();
+            Log.d(TAG, "Database Opened");
+            db.loadCSV(this);
+            Log.d(TAG, "CSV file loaded");
+            db.close();
+            Log.d(TAG, "Database Closed");
+
+
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstTime", true);
+            editor.commit();
+        }
+
 
         //get the views first.
         mPreview = (SurfaceView) findViewById(R.id.CameraView);
