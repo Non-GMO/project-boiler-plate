@@ -8,12 +8,12 @@
             android:title="Scan" />
         <item
             android:id="@+id/nav_numpad"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Numpad" />
+            android:icon="@drawable/ic_dialpad_black_24dp"
+            android:title="Enter UPC" />
         <item
             android:id="@+id/nav_list"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="List" />
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="Categories" />
     </group>
 
 </menu>
