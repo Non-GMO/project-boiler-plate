@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="edu.cs4730.barcodereader.myDialogFragment">
+    tools:context="edu.cs4730.barcodereader.myDialogFragment"
+    android:background="@color/background_material_dark">
 
 
     <LinearLayout
