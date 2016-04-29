@@ -1,15 +1,15 @@
 package non_gmo.cosc4950.edu.non_gmo;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 
 /*
@@ -79,6 +79,8 @@ public class CSVAdapter extends ArrayAdapter<Category>{
         return mView;
     }
 
+
+
     /*
      * Helper method that loads the data from the states.csv and builds
      * each csv row into a State object which then gets added to the Adapter.
@@ -110,5 +112,5 @@ public class CSVAdapter extends ArrayAdapter<Category>{
     }
 
 
-}
 
+}
