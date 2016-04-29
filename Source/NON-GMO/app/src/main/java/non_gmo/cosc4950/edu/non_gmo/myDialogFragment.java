@@ -4,6 +4,7 @@ import android.support.v4.app.DialogFragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,11 +22,11 @@ public class myDialogFragment extends DialogFragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
 
+
     // TODO: Rename and change types of parameters
     private String mParam1;
 
     private Button btn_back, btn_amazon;
-    private ImageView tv_bc;
 
 
 
@@ -74,6 +75,7 @@ public class myDialogFragment extends DialogFragment {
                 dismiss();
                 //http://www.amazon.com/s?url=search-alias%3Daps&field-keywords=honda+parts
                 String url = "http://www.amazon.com/s?url=search-alias%3Daps&field-keywords=" + mParam1;
+                Log.d("DialogFragment", "The amazon string is :" + url);
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
