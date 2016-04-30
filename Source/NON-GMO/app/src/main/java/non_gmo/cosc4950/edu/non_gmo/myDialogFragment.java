@@ -27,6 +27,7 @@ public class myDialogFragment extends DialogFragment {
     private String mParam1;
 
     private Button btn_back, btn_amazon;
+    private ImageView tv_bc;
 
 
 
