@@ -37,7 +37,7 @@
         </activity>
         <activity
             android:name=".ListActivity"
-            android:label="List"
+            android:label="Categories"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
