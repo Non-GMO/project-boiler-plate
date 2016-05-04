@@ -1,5 +1,5 @@
 // GMO_Search
-// searches shit
+// searches stuff
 
 #include<iostream>
 #include<fstream>
