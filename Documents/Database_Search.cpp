@@ -1,5 +1,5 @@
 // the previous function confirmed that the UPC is in the database
-// this function searches the database and returns the shit we need
+// this function searches the database and returns the stuff we need
 #include<iostream>
 #include<string>
 #include<vector>
